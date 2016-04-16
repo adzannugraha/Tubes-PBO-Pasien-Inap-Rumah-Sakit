@@ -5,6 +5,8 @@
  */
 package tubespbo;
 
+import Controller.ControllerViewMenu;
+
 /**
  *
  * @author Adzan
@@ -12,6 +14,6 @@ package tubespbo;
 public class Driver {
 
     public static void main(String[] args) {
-        
+        ControllerViewMenu a = new ControllerViewMenu(new Application());
     }
 }
