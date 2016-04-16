@@ -10,6 +10,7 @@ package tubespbo;
  * @author Adzan
  */
 public class PasienInap {
+        private static int idpasieninap = 0;
 	private Pasien pasien;
 	private Dokter dokter;
 	private String[] diagnosa = new String[5];
@@ -19,6 +20,7 @@ public class PasienInap {
 	{
 		this.pasien = pasien;
 		this.dokter = dokter;
+                this.idpasieninap++;
 	}
 	
 	public void addDiagnosa(String gejala)
@@ -62,4 +64,14 @@ public class PasienInap {
 	{
 		return jumlahdiagnosa;
 	}
+
+        public int getIdpasieninap() {
+            return idpasieninap;
+        }
+
+        public void setIdpasieninap(int idpasieninap) {
+            this.idpasieninap = idpasieninap;
+        }
+        
+        
 }

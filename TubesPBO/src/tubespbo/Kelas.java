@@ -11,10 +11,12 @@ package tubespbo;
  */
 public class Kelas {
     	private String namaKelas;
+        private int noKelas;
 	
-	public Kelas (String nmkls)
+	public Kelas (String nmkls,int noKelas)
 	{
 		this.namaKelas = nmkls;
+                this.noKelas = noKelas;
 	}
 	
 	public void setNamaKelas(String namaKelas) {
@@ -24,4 +26,14 @@ public class Kelas {
 	public String getNamaKelas() {
 		return namaKelas;
 	}
+
+        public int getNoKelas() {
+            return noKelas;
+        }
+
+        public void setNoKelas(int noKelas) {
+            this.noKelas = noKelas;
+        }
+        
+        
 }

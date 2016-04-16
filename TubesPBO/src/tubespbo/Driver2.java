@@ -5,6 +5,7 @@
  */
 package tubespbo;
 
+import Controller.ControllerViewMenu;
 import View.ViewConsole;
 
 /**
@@ -13,8 +14,7 @@ import View.ViewConsole;
  */
 public class Driver2 {
     public static void main(String[] args){
-        Application app = new Application();
-        ViewConsole view = new ViewConsole(app);
-        view.MainMenu();
+        
+        ControllerViewMenu a = new ControllerViewMenu(new Application());
     }
 }

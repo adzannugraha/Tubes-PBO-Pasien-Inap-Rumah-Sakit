@@ -15,11 +15,22 @@ public class Ruangan{
 	private int noKamar;
 	private int jumlahpasien;
 	
-	public Ruangan(int nokam, Kelas nmkel) 
+	public Ruangan(int nokam, Kelas nmkel, int jmlpasien) 
 	{
 		this.noKamar = nokam;
 		this.namakelas = nmkel;
+                this.jumlahpasien = jmlpasien;
 	}
+        
+        public int getNoKamar()
+        {
+               return noKamar;
+        }
+        
+        public Kelas getNamaKelas()
+        {
+                return namakelas; 
+        }
 	
 	public void tambahPasienInap(Pasien pasien, Dokter dokter)
 	{

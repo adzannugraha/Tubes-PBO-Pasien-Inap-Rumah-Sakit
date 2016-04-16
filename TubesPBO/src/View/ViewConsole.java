@@ -34,8 +34,8 @@ public class ViewConsole {
             System.out.println();
             System.out.println("1. Data Dokter");
             System.out.println("2. Data Pasien");
-            System.out.println("3. Data Ruangan");
-            System.out.println("4. Data Kelas");
+            System.out.println("3. Data Kelas");
+            System.out.println("4. Data Ruangan");
             System.out.println("5. Exit");
             System.out.println();
             System.out.print("Pilih Menu : ");
@@ -67,7 +67,7 @@ public class ViewConsole {
                             int noSip = s1.nextInt();
                             System.out.print("Masukkan Spesialis : ");
                             String spesialis = s2.nextLine();
-                            app.insertDokter(namadok, umurdok, jenisKelamindok, alamatdok, noSip, spesialis);
+                            //app.insertDokter(namadok, umurdok, jenisKelamindok, alamatdok, noSip, spesialis);
                             break;
                         
                         case 2:
@@ -136,7 +136,7 @@ public class ViewConsole {
                             String tgldaftar = s2.nextLine();
                             System.out.print("Masukkan Golongan Darah : ");
                             String goldarah = s2.nextLine();
-                            app.insertPasien(namapas,umurpas,jenisKelaminpas,alamatpas,idpasien,tgldaftar,goldarah);
+                            //app.insertPasien(namapas,umurpas,jenisKelaminpas,alamatpas,idpasien,tgldaftar,goldarah);
                             break; 
                         
                         case 2:
@@ -164,11 +164,11 @@ public class ViewConsole {
                             System.out.println();
                             System.out.print("Masukkan Indeks Dokter : ");
                             int j = s1.nextInt();
-                            Dokter f = app.getDokter(j);
+                            Pasien f = app.getPasien(j);
                             if (f != null) 
                             {
-                                app.deleteDokter(j);
-                                System.out.println("Data Dokter Berhasil Dihapus");
+                                app.deletePasien(j);
+                                System.out.println("Data Pasien Berhasil Dihapus");
                             }
                             else {
                                 System.out.println("Data Tidak Ditemukan");
@@ -197,7 +197,9 @@ public class ViewConsole {
                             System.out.println();
                             System.out.println("Nama Kelas : ");
                             String nmkelas = s2.nextLine();
-                            app.insertKelas(nmkelas);
+                            System.out.println("ID Kelas : ");
+                            int idkelas = s1.nextInt();
+                           // app.insertKelas(nmkelas,idkelas);
                             break; 
                         
                         case 2:
@@ -247,7 +249,7 @@ public class ViewConsole {
                             for(int h=0;h<app.banyakkelas();h++){
                                if(nmklss == app.getKelas(h).getNamaKelas()){
                                    Kelas kl = app.getKelas(h);
-                                   app.insertRuangan(nokam,kl);
+                                   //app.insertRuangan(nokam,kl);
                                }
                                else{
                                    System.out.println("Kelas Tidak Ada");
